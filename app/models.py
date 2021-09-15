@@ -1,13 +1,21 @@
 from django.db import models
 from parler.models import TranslatableModel, TranslatedFields
 from django.utils.translation import gettext_lazy as _
+from urllib.parse import urlparse
 
 
 class Contact_me(models.Model):
     full_name = models.CharField(max_length=255, blank=True, null=True, verbose_name=_('Ism familya'))
+    techno = models.CharField(max_length=200, null=True)
+    image = models.ImageField(upload_to='contactme', null=True)
+    resume = models.FileField(upload_to='files',null=True)
+    email = models.EmailField(null=True)
+    telegram = models.URLField(null=True)
+    instagram = models.URLField(null=True)
+    linkedin = models.URLField(null=True)
 
     def __str__(self):
-        return self.name
+        return self.full_name
 
 
 class About(TranslatableModel):
@@ -19,6 +27,7 @@ class About(TranslatableModel):
     age = models.PositiveIntegerField(max_length=2)
     email = models.EmailField()
     phone = models.CharField(max_length=30)
+    language = models.CharField(max_length=156, null=True)
 
     class Meta:
         verbose_name_plural = 'Blog'
@@ -47,6 +56,10 @@ class Portfolio(TranslatableModel):
 
     def __str__(self):
         return self.safe_translation_getter('title') or ''
+
+    def url_text(self):
+        parsed_url = urlparse(self.url)
+        return parsed_url.hostname.replace("www.", "") + "/..."
 
 
 class Experience(TranslatableModel):

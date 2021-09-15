@@ -8,7 +8,13 @@ from .models import (
 )
 
 admin.site.register(Contact_me)
+admin.site.register(Skills)
+# admin.site.register(Portfolio)
 # Register your models here.
 @admin.register(About)
-class CategoryAdmin(TranslatableAdmin):
-    list_display = ('title', 'description','address','email','phone',)
+class AboutAdmin(TranslatableAdmin):
+    list_display = ('title', 'description','address','email','phone', 'language',)
+
+@admin.register(Portfolio)
+class PortfolioAdmin(TranslatableAdmin):
+    list_display = ('title',)
