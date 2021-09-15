@@ -65,11 +65,11 @@ class Portfolio(TranslatableModel):
 class Experience(TranslatableModel):
     translations = TranslatedFields(
         description=models.TextField(verbose_name=_('Tavsif')),
+        dagree=models.CharField(max_length=100, null=True)
     )
     techno = models.CharField(max_length=100)
     from_date = models.DateField()
     to_date = models.DateField()
-    dagree = models.CharField(max_length=100)
 
     def __str__(self):
         return self.techno
