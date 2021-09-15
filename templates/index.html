@@ -97,7 +97,7 @@
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-              <div class="col-sm-8">{{ i.phone }}</div>
+              <div class="col-sm-8">+{{ i.phone }}</div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
@@ -249,55 +249,26 @@
 </div>
 <div class="section" id="experience">
   <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Work Experience</div>
+    <div class="h4 text-center mb-4 title">ISH TAJRIBAM</div>
     <div class="card">
       <div class="row">
+          {% for i in experience %}
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>March 2016 - Present</p>
-            <div class="h5">CreativeM</div>
+            <p>{{ i.from_date|date:"M Y" }} - {{ i.to_date|date:"M Y"  }}</p>
+            <div class="h5">{{ i.dagree }}</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Front End Developer</div>
-            <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
+            <div class="h5">{{ i.techno }}</div>
+            <p> {{ i.description }}</p>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>April 2014 - March 2016</p>
-            <div class="h5">WebNote</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Web Developer</div>
-            <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>April 2013 - February 2014</p>
-            <div class="h5">WEBM</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Intern</div>
-            <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
 <div class="section">
@@ -305,55 +276,23 @@
     <div class="h4 text-center mb-4 title">Education</div>
     <div class="card">
       <div class="row">
+          {% for i in education %}
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-education-header">
-            <p>2013 - 2015</p>
-            <div class="h5">Master's Degree</div>
+            <p>{{ i.from_date|date:"M Y" }} - {{ i.to_date|date:"M Y" }}</p>
+            <div class="h5">{{ i.dagree }}</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Master of Information Technology</div>
-            <p class="category">University of Computer Science</p>
-            <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
+            <div class="h5">{{ i.name }}</div>
+            <p>{{ i.description }}</p>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2009 - 2013</p>
-            <div class="h5">Bachelor's Degree</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Bachelor of Computer Science</div>
-            <p class="category">University of Computer Science</p>
-            <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2007 - 2009</p>
-            <div class="h5">High School</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Science and Mathematics</div>
-            <p class="category">School of Secondary board</p>
-            <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
 <div class="section" id="reference">
@@ -369,13 +308,15 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
-              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="{% static 'images/reference-image-1.jpg' %}" alt="Image"/>
-                <div class="h5 pt-2">Aiyana</div>
-                <p class="category">CEO / WEBM</p>
+                {% for i in reference %}
+              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="{{ i.image.url }}" alt="Image"/>
+                <div class="h5 pt-2">{{ i.full_name }}</div>
+                <p class="category">{{ i.techno }}</p>
               </div>
               <div class="col-lg-10 col-md-9">
-                <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus nisl nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
+                <p> {{ i.description }}</p>
               </div>
+                {% endfor %}
             </div>
           </div>
           <div class="carousel-item">
@@ -412,12 +353,12 @@
         <div class="row">
           <div class="col-md-9">
             <div class="card mb-0" data-aos="zoom-in">
-              <div class="h4 text-center title">Contact Me</div>
+              <div class="h4 text-center title">MEN BILAN BOG`LANING</div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
                     <form action="https://formspree.io/your@email.com" method="POST">
-                      <div class="p pb-3"><strong>Feel free to contact me </strong></div>
+                      <div class="p pb-3"><strong></strong></div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
@@ -455,14 +396,16 @@
                   </div>
                 </div>
                 <div class="col-md-6">
+                    {% for i in about %}
                   <div class="card-body">
                     <p class="mb-0"><strong>Address </strong></p>
-                    <p class="pb-2">140, City Center, New York, U.S.A</p>
+                    <p class="pb-2">{{ i.address }}</p>
                     <p class="mb-0"><strong>Phone</strong></p>
-                    <p class="pb-2">+1718-111-0011</p>
+                    <p class="pb-2">+{{ i.phone }}</p>
                     <p class="mb-0"><strong>Email</strong></p>
-                    <p>anthony@company.com</p>
+                    <p>{{ i.email }}</p>
                   </div>
+                    {% endfor %}
                 </div>
               </div>
             </div>
