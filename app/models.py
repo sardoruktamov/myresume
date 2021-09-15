@@ -8,7 +8,7 @@ class Contact_me(models.Model):
     full_name = models.CharField(max_length=255, blank=True, null=True, verbose_name=_('Ism familya'))
     techno = models.CharField(max_length=200, null=True)
     image = models.ImageField(upload_to='contactme', null=True)
-    resume = models.FileField(upload_to='files',null=True)
+    resume = models.FileField(upload_to='files', null=True)
     email = models.EmailField(null=True)
     telegram = models.URLField(null=True)
     instagram = models.URLField(null=True)
@@ -57,9 +57,7 @@ class Portfolio(TranslatableModel):
     def __str__(self):
         return self.safe_translation_getter('title') or ''
 
-    def url_text(self):
-        parsed_url = urlparse(self.url)
-        return parsed_url.hostname.replace("www.", "") + "/..."
+
 
 
 class Experience(TranslatableModel):
@@ -84,6 +82,7 @@ class Education(TranslatableModel):
     from_date = models.DateField()
     to_date = models.DateField()
 
+
 class References(TranslatableModel):
     translations = TranslatedFields(
         full_name=models.CharField(max_length=255, verbose_name=_('Nomi')),
@@ -91,3 +90,13 @@ class References(TranslatableModel):
         techno=models.CharField(max_length=100)
     )
     image = models.ImageField(upload_to="references")
+
+
+class Contact(models.Model):
+    full_name = models.CharField(max_length=50)
+    subject = models.CharField(max_length=150)
+    email = models.EmailField()
+    message = models.TextField(max_length=1000)
+
+    def __str__(self):
+        return f"{self.full_name} | {self.subject}"
