@@ -4,7 +4,7 @@ from .models import (
     Contact_me, About,
     Skills, Portfolio,
     Experience, Education,
-    References
+    References, Contact
 )
 
 admin.site.register(Contact_me)
@@ -34,3 +34,5 @@ class EducationAdmin(TranslatableAdmin):
 @admin.register(References)
 class ReferencesAdmin(TranslatableAdmin):
     list_display = ('full_name', 'description', 'techno', 'image',)
+
+admin.site.register(Contact)
