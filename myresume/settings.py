@@ -156,3 +156,10 @@ PARLER_LANGUAGES = {
     }
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = "postmaster@sandboxc2a3756365ca456c9e9ac41e0343adec.mailgun.org"
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = 'ab2bc8aa44c25cbfb9bae8dbf5f3a37f-90346a2d-0e7be572'
