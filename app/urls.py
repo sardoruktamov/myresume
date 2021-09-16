@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import contactme
+from .views import contactme, sendmail
 
 urlpatterns = [
-    path('', contactme, name="contactme")
+    path('', contactme, name="contactme"),
+    path('sendmail/', sendmail, name="sendmail"),
     ]
