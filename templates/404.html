@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -29,13 +29,7 @@
               <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
-              </ul>
+
             </div>
           </div>
         </nav>
@@ -46,16 +40,17 @@
 <div class="section" id="skill">
   <div class="container ">
       <div class="content-center" style="text-align: center">
-    <div class="h4 text-center mb-4 title">Siz mavjud bo'lmagan sahifaga kirishga urundingiz! <h2>(404)</h2></div>
-      <a class="btn btn-primary smooth-scroll mr-2" href="/" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Bosh sahifa</a>
+    <div class="h4 text-center mb-4 title"> {% trans "Siz mavjud bo'lmagan sahifaga kirishga urundingiz!" %}<h2>(404)</h2></div>
+      <a class="btn btn-primary smooth-scroll mr-2" href="/" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">{% trans 'Bosh sahifa' %}</a>
       </div>
   </div>
 </div>
     <footer class="footer">
-      <div class="container text-center"><a class="cc-facebook btn btn-link" href="#"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
-      <div class="h4 title text-center">Anthony Barnett</div>
       <div class="text-center text-muted">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+        <p>&copy; Creative CV. {% trans 'Barcha huquqlar himoyalangan' %}.<br>
+            Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a> |
+            Backend developer - Sardorbek O'ktamov
+        </p>
       </div>
     </footer>
     <script src="{%  static 'js/core/jquery.3.2.1.min.js' %}"></script>

@@ -1,11 +1,13 @@
-{% load static %}
+{% load static i18n %}
+{% get_current_language as LANGUGES_CODE %}
+{% get_available_languages as languages %}
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Creative CV</title>
+    <title>Men haqimda qiziqqaningizni hurmat qilaman, raxmat sizga!</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="{% static 'css/aos.css' %}" rel="stylesheet">
@@ -30,11 +32,11 @@
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Men haqimda</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Ko'nikmalar</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Tajriba</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Bog'lanish</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">{% trans 'Men haqimda' %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">{% trans "Ko'nikmalar" %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">{% trans 'Portfolio' %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">{% trans 'Tajriba' %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">{% trans "Bog'lanish" %}</a></li>
               </ul>
             </div>
           </div>
@@ -53,8 +55,8 @@
           <div class="cc-profile-image"><a href="#"><img src="{{ i.image.url }}" alt="Image"/></a></div>
           <div class="h2 title">{{ i.full_name }}</div>
           <p class="category text-white">{{ i.techno }}</p>
-            <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Bog'lanish</a>
-            <a class="btn btn-primary" href="{{ i.resume.url }}" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Yuklash CV</a>
+            <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">{% trans "Bog'lanish" %}</a>
+            <a class="btn btn-primary" href="{{ i.resume.url }}" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">{% trans 'Yuklash' %} CV</a>
         </div>
       </div>
       <div class="section">
@@ -77,7 +79,7 @@
           {% for i in about %}
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title">Men haqimda</div>
+            <div class="h4 mt-0 title">{% trans 'Men haqimda' %}</div>
             <p>{{ i.title }}</p>
             <p>{{ i.description }}</p>
           </div>
@@ -85,25 +87,25 @@
         <div class="col-lg-6 col-md-12">
 
           <div class="card-body">
-            <div class="h4 mt-0 title">Asosiy ma'lumotlar</div>
+            <div class="h4 mt-0 title">{% trans "Asosiy ma'lumotlar" %}</div>
             <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">Yosh:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans 'Yosh' %}:</strong></div>
               <div class="col-sm-8">{{ i.age }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans 'E-pochta' %}:</strong></div>
               <div class="col-sm-8">{{ i.email }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Telefon:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans 'Telefon' %}:</strong></div>
               <div class="col-sm-8">+{{ i.phone }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Manzil:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans 'Manzil' %}:</strong></div>
               <div class="col-sm-8">{{ i.address }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Til:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans 'Til' %}:</strong></div>
               <div class="col-sm-8">{{ i.language }}</div>
             </div>
           </div>
@@ -116,7 +118,7 @@
 </div>
 <div class="section" id="skill">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Kasbiy malaka</div>
+    <div class="h4 text-center mb-4 title">{% trans 'Kasbiy malaka' %}</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
@@ -138,7 +140,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 ml-auto mr-auto">
-        <div class="h4 text-center mb-4 title">Portfolio</div>
+        <div class="h4 text-center mb-4 title">{% trans 'Portfolio' %}</div>
 
       </div>
     </div>
@@ -166,7 +168,7 @@
 </div>
 <div class="section" id="experience">
   <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">ISH TAJRIBAM</div>
+    <div class="h4 text-center mb-4 title">{% trans 'ISH TAJRIBAM' %}</div>
     <div class="card">
       <div class="row">
           {% for i in experience %}
@@ -190,7 +192,7 @@
 </div>
 <div class="section">
   <div class="container cc-education">
-    <div class="h4 text-center mb-4 title">Ta'lim</div>
+    <div class="h4 text-center mb-4 title">{% trans "Ta'lim" %}</div>
     <div class="card">
       <div class="row">
           {% for i in education %}
@@ -215,7 +217,7 @@
 {% if reference %}
 <div class="section" id="reference">
   <div class="container cc-reference">
-    <div class="h4 mb-4 text-center title">Tavsiya</div>
+    <div class="h4 mb-4 text-center title">{%  trans 'Tavsiya' %}</div>
     <div class="card" data-aos="zoom-in">
       <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -251,7 +253,7 @@
         <div class="row">
           <div class="col-md-9">
             <div class="card mb-0" data-aos="zoom-in">
-              <div class="h4 text-center title">MEN BILAN BOG`LANING</div>
+              <div class="h4 text-center title">{% trans "MEN BILAN BOG`LANING" %}</div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
@@ -288,7 +290,7 @@
                       </div>
                       <div class="row">
                         <div class="col">
-                          <button class="btn btn-primary" type="submit">Yuborish</button>
+                          <button class="btn btn-primary" type="submit">{% trans 'Yuborish' %}</button>
                         </div>
                       </div>
                     </form>
@@ -297,11 +299,11 @@
                 <div class="col-md-6">
                     {% for i in about %}
                   <div class="card-body">
-                    <p class="mb-0"><strong>Address </strong></p>
+                    <p class="mb-0"><strong>{% trans 'Manzil' %} </strong></p>
                     <p class="pb-2">{{ i.address }}</p>
-                    <p class="mb-0"><strong>Phone</strong></p>
+                    <p class="mb-0"><strong>{% trans 'Telefon' %}</strong></p>
                     <p class="pb-2">+{{ i.phone }}</p>
-                    <p class="mb-0"><strong>Email</strong></p>
+                    <p class="mb-0"><strong>{% trans "E-pochta" %}</strong></p>
                     <p>{{ i.email }}</p>
                   </div>
                     {% endfor %}
@@ -323,7 +325,7 @@
           <a class="cc-instagram btn btn-link" href="{{ i.instagram }}"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
       <div class="h4 title text-center">{{ i.full_name }}</div>
       <div class="text-center text-muted">
-        <p>&copy; Creative CV. Barcha huquqlar himoyalangan.<br>
+        <p>&copy; Creative CV. {% trans 'Barcha huquqlar himoyalangan' %}.<br>
             Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a> |
             Backend developer - Sardorbek O'ktamov
         </p>
