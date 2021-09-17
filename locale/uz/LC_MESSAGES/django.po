@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-17 21:26+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\app\models.py:8
+msgid "Ism familya"
+msgstr "Ism familya"
+
+#: .\app\models.py:23 .\app\models.py:52
+msgid "Title"
+msgstr "Sarlavha"
+
+#: .\app\models.py:24
+msgid "Description"
+msgstr "tavsif"
+
+#: .\app\models.py:65 .\app\models.py:79 .\app\models.py:89
+msgid "Tavsif"
+msgstr "Tavsif"
+
+#: .\app\models.py:78 .\app\models.py:88
+msgid "Nomi"
+msgstr "Nomi"
+
+#: .\templates\404.html:43
+msgid "Siz mavjud bo'lmagan sahifaga kirishga urundingiz!"
+msgstr "Siz mavjud bo'lmagan sahifaga kirishga urundingiz!"
+
+#: .\templates\404.html:44 .\templates\sendmail.html:42
+msgid "Bosh sahifa"
+msgstr "Bosh sahifa"
+
+#: .\templates\404.html:50 .\templates\index.html:326
+#: .\templates\sendmail.html:53
+msgid "Barcha huquqlar himoyalangan"
+msgstr "Barcha huquqlar himoyalangan"
+
+#: .\templates\index.html:33 .\templates\index.html:80
+msgid "Men haqimda"
+msgstr "Men haqimda"
+
+#: .\templates\index.html:34
+msgid "Ko'nikmalar"
+msgstr "Ko'nikmalar"
+
+#: .\templates\index.html:35 .\templates\index.html:141
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: .\templates\index.html:36
+msgid "Tajriba"
+msgstr "Tajriba"
+
+#: .\templates\index.html:37 .\templates\index.html:56
+msgid "Bog'lanish"
+msgstr "Bog'lanish"
+
+#: .\templates\index.html:57
+msgid "Yuklash"
+msgstr "Yuklash"
+
+#: .\templates\index.html:88
+msgid "Asosiy ma'lumotlar"
+msgstr "Asosiy ma'lumotlar"
+
+#: .\templates\index.html:90
+msgid "Yosh"
+msgstr "Yosh"
+
+#: .\templates\index.html:94 .\templates\index.html:304
+msgid "E-pochta"
+msgstr "E-pochta"
+
+#: .\templates\index.html:98 .\templates\index.html:302
+msgid "Telefon"
+msgstr "Telefon"
+
+#: .\templates\index.html:102 .\templates\index.html:300
+msgid "Manzil"
+msgstr "Manzil"
+
+#: .\templates\index.html:106
+msgid "Til"
+msgstr "Til"
+
+#: .\templates\index.html:119
+msgid "Kasbiy malaka"
+msgstr "Kasbiy malaka"
+
+#: .\templates\index.html:169
+msgid "ISH TAJRIBAM"
+msgstr "ISH TAJRIBAM"
+
+#: .\templates\index.html:193
+msgid "Ta'lim"
+msgstr "Ta'lim"
+
+#: .\templates\index.html:218
+msgid "Tavsiya"
+msgstr "Tavsiya"
+
+#: .\templates\index.html:254
+msgid "MEN BILAN BOG`LANING"
+msgstr "MEN BILAN BOG`LANING"
+
+#: .\templates\index.html:291
+msgid "Yuborish"
+msgstr "Yuborish"
+
+#: .\templates\sendmail.html:41
+msgid ""
+"Xabaringiz muvoffaqiyatli yuborildi! Tez orada elektron pochtangizga javob "
+"yuboriladi"
+msgstr "Xabaringiz muvoffaqiyatli yuborildi! Tez orada elektron pochtangizga javob yuboriladi"

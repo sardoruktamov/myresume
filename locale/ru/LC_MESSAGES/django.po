@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-17 21:26+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\app\models.py:8
+msgid "Ism familya"
+msgstr "Имя Фамилия"
+
+#: .\app\models.py:23 .\app\models.py:52
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\app\models.py:24
+msgid "Description"
+msgstr "Описание"
+
+#: .\app\models.py:65 .\app\models.py:79 .\app\models.py:89
+msgid "Tavsif"
+msgstr "Описание"
+
+#: .\app\models.py:78 .\app\models.py:88
+msgid "Nomi"
+msgstr "имя"
+
+#: .\templates\404.html:43
+msgid "Siz mavjud bo'lmagan sahifaga kirishga urundingiz!"
+msgstr "Вы пытались получить доступ к несуществующей странице!"
+
+#: .\templates\404.html:44 .\templates\sendmail.html:42
+msgid "Bosh sahifa"
+msgstr "Дом"
+
+#: .\templates\404.html:50 .\templates\index.html:326
+#: .\templates\sendmail.html:53
+msgid "Barcha huquqlar himoyalangan"
+msgstr "все права защищены"
+
+#: .\templates\index.html:33 .\templates\index.html:80
+msgid "Men haqimda"
+msgstr "обо мне"
+
+#: .\templates\index.html:34
+msgid "Ko'nikmalar"
+msgstr "Навыки и умения"
+
+#: .\templates\index.html:35 .\templates\index.html:141
+msgid "Portfolio"
+msgstr "портфолио"
+
+#: .\templates\index.html:36
+msgid "Tajriba"
+msgstr "Опыт"
+
+#: .\templates\index.html:37 .\templates\index.html:56
+msgid "Bog'lanish"
+msgstr "Связь"
+
+#: .\templates\index.html:57
+msgid "Yuklash"
+msgstr "Скачать"
+
+#: .\templates\index.html:88
+msgid "Asosiy ma'lumotlar"
+msgstr "Основная информация"
+
+#: .\templates\index.html:90
+msgid "Yosh"
+msgstr "Возраст"
+
+#: .\templates\index.html:94 .\templates\index.html:304
+msgid "E-pochta"
+msgstr "Эл. адрес"
+
+#: .\templates\index.html:98 .\templates\index.html:302
+msgid "Telefon"
+msgstr "Телефон"
+
+#: .\templates\index.html:102 .\templates\index.html:300
+msgid "Manzil"
+msgstr "Адрес"
+
+#: .\templates\index.html:106
+msgid "Til"
+msgstr "язык"
+
+#: .\templates\index.html:119
+msgid "Kasbiy malaka"
+msgstr "Профессиональная квалификация"
+
+#: .\templates\index.html:169
+msgid "ISH TAJRIBAM"
+msgstr "РАБОЧИЙ СТАЖ"
+
+#: .\templates\index.html:193
+msgid "Ta'lim"
+msgstr "Образование"
+
+#: .\templates\index.html:218
+msgid "Tavsiya"
+msgstr "рекомендуемые"
+
+#: .\templates\index.html:254
+msgid "MEN BILAN BOG`LANING"
+msgstr "СВЯЖИТЕСЬ СО МНОЙ"
+
+#: .\templates\index.html:291
+msgid "Yuborish"
+msgstr "послать"
+
+#: .\templates\sendmail.html:41
+msgid ""
+"Xabaringiz muvoffaqiyatli yuborildi! Tez orada elektron pochtangizga javob "
+"yuboriladi"
+msgstr "Ваше сообщение было отправлено успешно! Ответ будет отправлен на вашу электронную почту в ближайшее время"
