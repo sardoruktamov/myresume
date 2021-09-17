@@ -30,11 +30,11 @@
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Men haqimda</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Ko'nikmalar</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Tajriba</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Bog'lanish</a></li>
               </ul>
             </div>
           </div>
@@ -53,17 +53,16 @@
           <div class="cc-profile-image"><a href="#"><img src="{{ i.image.url }}" alt="Image"/></a></div>
           <div class="h2 title">{{ i.full_name }}</div>
           <p class="category text-white">{{ i.techno }}</p>
-            <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a>
-            <a class="btn btn-primary" href="{{ i.resume.url }}" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+            <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Bog'lanish</a>
+            <a class="btn btn-primary" href="{{ i.resume.url }}" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Yuklash CV</a>
         </div>
       </div>
       <div class="section">
         <div class="container">
           <div class="button-container">
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.telegram }}" rel="tooltip" title="Follow me on Facebook"><i class="fa fa-facebook"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.instagram }}" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a>
-{#            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.email }}" rel="tooltip" title="Follow me on Google+"><i class="fa fa-google-plus"></i></a>#}
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.linkedin }}" rel="tooltip" title="Follow me on Instagram"><i class="fa fa-instagram"></i></a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.telegram }}" rel="tooltip" ><i class="fa fa-telegram"></i></a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.instagram }}" rel="tooltip" ><i class="fa fa-instagram"></i></a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ i.linkedin }}" rel="tooltip"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -88,7 +87,7 @@
           <div class="card-body">
             <div class="h4 mt-0 title">Asosiy ma'lumotlar</div>
             <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Yosh:</strong></div>
               <div class="col-sm-8">{{ i.age }}</div>
             </div>
             <div class="row mt-3">
@@ -96,15 +95,15 @@
               <div class="col-sm-8">{{ i.email }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Telefon:</strong></div>
               <div class="col-sm-8">+{{ i.phone }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Manzil:</strong></div>
               <div class="col-sm-8">{{ i.address }}</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Til:</strong></div>
               <div class="col-sm-8">{{ i.language }}</div>
             </div>
           </div>
@@ -117,7 +116,7 @@
 </div>
 <div class="section" id="skill">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Professional Skills</div>
+    <div class="h4 text-center mb-4 title">Kasbiy malaka</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
@@ -140,13 +139,7 @@
     <div class="row">
       <div class="col-md-6 ml-auto mr-auto">
         <div class="h4 text-center mb-4 title">Portfolio</div>
-        <div class="nav-align-center">
-          <ul class="nav nav-pills nav-pills-primary" role="tablist">
-{#            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>#}
-{#            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#graphic-design" role="tablist"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>#}
-{#            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Photography" role="tablist"><i class="fa fa-camera" aria-hidden="true"></i></a></li>#}
-          </ul>
-        </div>
+
       </div>
     </div>
     <div class="tab-content gallery mt-5">
@@ -165,82 +158,6 @@
 
             </div>
             {% endfor %}
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="graphic-design" role="tabpanel">
-        <div class="ml-auto mr-auto">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/graphic-design-1.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Triangle Pattern</div>
-                      <p>Graphic Design</p>
-                    </figcaption>
-                  </figure></a></div>
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/graphic-design-2.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Abstract Umbrella</div>
-                      <p>Graphic Design</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/graphic-design-3.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Cube Surface Texture</div>
-                      <p>Graphic Design</p>
-                    </figcaption>
-                  </figure></a></div>
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/graphic-design-4.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Abstract Line</div>
-                      <p>Graphic Design</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="Photography" role="tabpanel">
-        <div class="ml-auto mr-auto">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/photography-1.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Photoshoot</div>
-                      <p>Photography</p>
-                    </figcaption>
-                  </figure></a></div>
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/photography-3.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Wedding Photoshoot</div>
-                      <p>Photography</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/photography-2.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Beach Photoshoot</div>
-                      <p>Photography</p>
-                    </figcaption>
-                  </figure></a></div>
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                  <figure class="cc-effect"><img src="images/photography-4.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Nature Photoshoot</div>
-                      <p>Photography</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
           </div>
         </div>
       </div>
@@ -273,7 +190,7 @@
 </div>
 <div class="section">
   <div class="container cc-education">
-    <div class="h4 text-center mb-4 title">Education</div>
+    <div class="h4 text-center mb-4 title">Ta'lim</div>
     <div class="card">
       <div class="row">
           {% for i in education %}
@@ -295,9 +212,10 @@
 
   </div>
 </div>
+{% if reference %}
 <div class="section" id="reference">
   <div class="container cc-reference">
-    <div class="h4 mb-4 text-center title">References</div>
+    <div class="h4 mb-4 text-center title">Tavsiya</div>
     <div class="card" data-aos="zoom-in">
       <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -319,33 +237,13 @@
                 {% endfor %}
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="{% static 'images/reference-image-2.jpg' %}" alt="Image"/>
-                <div class="h5 pt-2">Braiden</div>
-                <p class="category">CEO / Creativem</p>
-              </div>
-              <div class="col-lg-10 col-md-9">
-                <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus nisl nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="{% static 'images/reference-image-3.jpg' %}" alt="Image"/>
-                <div class="h5 pt-2">Alexander</div>
-                <p class="category">CEO / Webnote</p>
-              </div>
-              <div class="col-lg-10 col-md-9">
-                <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus nisl nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
+{% endif %}
 <div class="section" id="contact">
   <div class="cc-contact-information" style="background-image: url({% static 'images/rishtonmap.png' %})">
     <div class="container">
@@ -357,39 +255,40 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <form action="https://formspree.io/your@email.com" method="POST">
+                    <form action="{% url 'sendmail' %}" method="POST">
+                        {% csrf_token %}
                       <div class="p pb-3"><strong></strong></div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input class="form-control" type="text" name="name" placeholder="Name" required="required"/>
+                            <input class="form-control" type="text" name="full_name" placeholder="ism familyangizmi kiriting..." required="required"/>
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                            <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/>
+                            <input class="form-control" type="text" name="subject" placeholder="xabar mavzusi qanday?" required="required"/>
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
+                            <input class="form-control" type="email" name="email" placeholder="elektron pochtangizni kiriting..." required="required"/>
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
+                            <textarea class="form-control" name="message" placeholder="yubormoqchi bo'lgan xabaringizni kiriting..." required="required"></textarea>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col">
-                          <button class="btn btn-primary" type="submit">Send</button>
+                          <button class="btn btn-primary" type="submit">Yuborish</button>
                         </div>
                       </div>
                     </form>
@@ -416,18 +315,27 @@
   </div>
 </div></div>
     </div>
+    {% for i in contactme %}
     <footer class="footer">
-      <div class="container text-center"><a class="cc-facebook btn btn-link" href="#"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
-      <div class="h4 title text-center">Anthony Barnett</div>
+      <div class="container text-center">
+          <a class="cc-facebook btn btn-link" href="{{ i.telegram }}"><i class="fa fa-telegram fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-twitter btn btn-link " href="{{ i.linkedin }}"><i class="fa fa-linkedin fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-instagram btn btn-link" href="{{ i.instagram }}"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
+      <div class="h4 title text-center">{{ i.full_name }}</div>
       <div class="text-center text-muted">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+        <p>&copy; Creative CV. Barcha huquqlar himoyalangan.<br>
+            Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a> |
+            Backend developer - Sardorbek O'ktamov
+        </p>
       </div>
     </footer>
+    {% endfor %}
     <script src="{%  static 'js/core/jquery.3.2.1.min.js' %}"></script>
     <script src="{%  static 'js/core/popper.min.js' %}"></script>
     <script src="{%  static 'js/core/bootstrap.min.js' %}"></script>
     <script src="{%  static 'js/now-ui-kit.js' %}"></script>
     <script src="{%  static 'js/aos.js' %}"></script>
     <script src="{%  static 'scripts/main.js' %}"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   </body>
 </html>
