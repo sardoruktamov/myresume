@@ -19,6 +19,17 @@
             opacity: 1 !important;
             transform: translate(0) scale(1) !important;
         }
+        .container .navbar-translate #exampleFormControlSelect1 #select_option2{
+
+            color: whitesmoke;
+            border: 1px solid red;
+            border-radius: 50%;
+            width: 150px;
+            background-color: #0b2e13;
+        }
+        .container .navbar-translate #select_option1:hover{
+            background: red;
+        }
       </style>
     </noscript>
   </head>
@@ -29,20 +40,20 @@
           <div class="container">
             <div class="navbar-translate">
 
-                <form onchange="{% url 'set_language' %}" method="post" >{% csrf_token %}
-                        <input name="next" type="hidden" value="">
-                        <select name="language" >
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value=""><div class="form-group">
+                        <select name="language" onchange="this.form.submit()" class="form-control" id="exampleFormControlSelect1" style="background-color: white">
                             {% get_current_language as LANGUAGE_CODE %}
                             {% get_available_languages as LANGUAGES %}
                             {% get_language_info_list for LANGUAGES as languages %}
                             {% for language in languages %}
                                 <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
-                                        selected{% endif %} >
-                                    {{ language.name_local }} ({{ language.code }})
+                                        selected{% endif %} id="select_option2" >
+                                    {{ language.name_local }} ({{ language.code }}) &nbsp;&nbsp;
                                 </option>
                             {% endfor %}
-                        </select>
-                        <input type="submit" value="Go">
+                        </select></div>
+                        {% comment %} <input type="submit" value="Go"> {% endcomment %}
                     </form>
 
               <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
