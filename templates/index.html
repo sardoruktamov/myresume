@@ -42,13 +42,13 @@
 
                 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
                         <input name="next" type="hidden" value=""><div class="form-group">
-                        <select name="language" onchange="this.form.submit()" class="form-control" id="exampleFormControlSelect1" style="background-color: white">
+                        <select name="language" onchange="this.form.submit()" id="exampleFormControlSelect1" style="color: green">
                             {% get_current_language as LANGUAGE_CODE %}
                             {% get_available_languages as LANGUAGES %}
                             {% get_language_info_list for LANGUAGES as languages %}
                             {% for language in languages %}
                                 <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
-                                        selected{% endif %} id="select_option2" >
+                                        selected{% endif %} id="select_option2" style="background-color: snow ; color: green">
                                     {{ language.name_local }} ({{ language.code }}) &nbsp;&nbsp;
                                 </option>
                             {% endfor %}
