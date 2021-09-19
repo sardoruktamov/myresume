@@ -75,6 +75,7 @@
       <div>
 <div class="profile-page">
   <div class="wrapper">
+  {% if contactme %}
       {% for i in contactme %}
     <div class="page-header page-header-small" filter-color="green">
       <div class="page-header-image" data-parallax="true" style="background-image: url({% static 'images/cc-bg-1.jpg' %})"></div>
@@ -98,12 +99,14 @@
       </div>
     </div>
     {% endfor %}
+  {% endif %}
   </div>
 </div>
 <div class="section" id="about">
   <div class="container">
     <div class="card" data-aos="fade-up" data-aos-offset="10">
       <div class="row">
+      {% if about %}
           {% for i in about %}
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
@@ -141,6 +144,7 @@
         </div>
       </div>
     {% endfor %}
+    {% endif %}
     </div>
   </div>
 </div>
@@ -150,6 +154,7 @@
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
+        {% if skills %}
             {% for i in skills %}
           <div class="col-md-6">
             <div class="progress-container progress-primary"><span class="progress-badge">{{ i.name }}</span>
@@ -159,6 +164,7 @@
             </div>
           </div>
             {% endfor %}
+        {% endif %}
         </div>
       </div>
     </div>
@@ -175,7 +181,9 @@
     <div class="tab-content gallery mt-5">
       <div class="tab-pane active" id="web-development">
         <div class="ml-auto mr-auto">
-          <div class="row">{% for i in portfolio %}
+          <div class="row">
+          {% if portfolio %}
+              {% for i in portfolio %}
             <div class="col-md-6">
 
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="{{ i.url }}">
@@ -188,6 +196,7 @@
 
             </div>
             {% endfor %}
+          {% endif %}
           </div>
         </div>
       </div>
@@ -199,6 +208,7 @@
     <div class="h4 text-center mb-4 title">{% trans 'ISH TAJRIBAM' %}</div>
     <div class="card">
       <div class="row">
+      {% if experience %}
           {% for i in experience %}
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
@@ -213,6 +223,7 @@
           </div>
         </div>
         {% endfor %}
+      {% endif %}
       </div>
     </div>
 
@@ -223,6 +234,7 @@
     <div class="h4 text-center mb-4 title">{% trans "Ta'lim" %}</div>
     <div class="card">
       <div class="row">
+      {% if education %}
           {% for i in education %}
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-education-header">
@@ -237,6 +249,7 @@
           </div>
         </div>
         {% endfor %}
+      {% endif %}
       </div>
     </div>
 
@@ -325,6 +338,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
+                {% if about %}
                     {% for i in about %}
                   <div class="card-body">
                     <p class="mb-0"><strong>{% trans 'Manzil' %} </strong></p>
@@ -335,6 +349,7 @@
                     <p>{{ i.email }}</p>
                   </div>
                     {% endfor %}
+                {% endif %}
                 </div>
               </div>
             </div>
