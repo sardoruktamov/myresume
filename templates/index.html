@@ -78,7 +78,7 @@
   {% if contactme %}
       {% for i in contactme %}
     <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url({% static 'images/cc-bg-1.jpg' %})"></div>
+      <div class="page-header-image" data-parallax="true" style="background-color: #49855C"></div>
       <div class="container">
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="{{ i.image.url }}" alt="Image"/></a></div>
@@ -231,11 +231,11 @@
 </div>
 <div class="section">
   <div class="container cc-education">
-    <div class="h4 text-center mb-4 title">{% trans "Ta'lim" %}</div>
+    <div class="h4 text-center mb-4 title">{% trans "Ta'lim" %}</div>{% if education %}
+          {% for i in education %}
     <div class="card">
       <div class="row">
-      {% if education %}
-          {% for i in education %}
+
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-education-header">
             <p>{{ i.from_date|date:"M Y" }} - {{ i.to_date|date:"M Y" }}</p>
@@ -248,12 +248,11 @@
             <p>{{ i.description }}</p>
           </div>
         </div>
+      </div>
+  </div>
         {% endfor %}
       {% endif %}
-      </div>
     </div>
-
-  </div>
 </div>
 {% if reference %}
 <div class="section" id="reference">
