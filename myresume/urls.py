@@ -28,12 +28,11 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('', include('app.urls')),
 )
-if settings.DEBUG:
-    handler404 = 'app.views.error_404_view'
+handler404 = 'app.views.error_404_view'
 
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG == False:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 
