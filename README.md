@@ -1,3 +1,3 @@
-# Myresume \n
-step-1: pip install -r requirements.txt \n
+# Myresume 
+step-1: pip install -r requirements.txt 
 step-2: python manage.py runserver --insecure
