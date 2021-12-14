@@ -7,7 +7,7 @@ from .models import (
 )
 from django.core.mail import send_mail
 from django.conf import settings
-
+import telebot
 
 def contactme(request):
     # if request.method == "GET":
@@ -53,6 +53,9 @@ def contactme(request):
     #     return render(request, 'index.html')
 
 
+token = '5019447670:AAFn4ykn5t9O0upLvEwoFiy5rpqvhuXCmuY'
+bot = telebot.TeleBot(token)
+chat_id = '442569765'
 
 def sendmail(request):
     if request.method == "POST":
@@ -68,7 +71,7 @@ def sendmail(request):
             ['sardorbek.uktamov.1@mail.ru'],
             fail_silently=False,
         )
-
+        bot.send_message(chat_id, msg)
         contact_user = Contact(
             full_name=full_name,
             email=email,
@@ -81,3 +84,8 @@ def sendmail(request):
 
 def error_404_view(request, exception):
     return render(request, "404.html")
+
+
+
+
+
